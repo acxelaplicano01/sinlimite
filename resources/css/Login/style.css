@@ -1,0 +1,463 @@
+/* ===== Google Font Import - Nunito ===== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/* Layout principal */
+.login-main {
+    width: 900px;
+    max-width: 98vw;
+    height: 600px;
+    background: #fff;
+    border-radius: 24px;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+}
+
+.login-info {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    height: 100%;
+}
+
+.login-form-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background: #fff;
+}
+
+/* Ajusta el form para que se vea centrado en la columna derecha */
+.login-form-col .container {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 1px, transparent 1px), radial-gradient(circle 500px at 20% 100%, rgba(179, 166, 166, 0.3), transparent), radial-gradient(circle 500px at 100% 80%, rgba(165, 154, 154, 0.3), transparent); background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+}
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #ffffff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 600px;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #eab308;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #eab308;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: #eab308;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin-right: 10px;
+    accent-color: #eab308;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #eab308;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #c69709;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #d9a509;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) and (min-width: 769px) {
+    .login-main {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        flex-direction: row;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .login-info, .login-form-col {
+        width: 50%;
+        min-width: 0;
+        border-radius: 0;
+        height: 100vh;
+    }
+    .login-info {
+        padding: 40px 20px;
+    }
+    .login-form-col {
+        padding: 40px 30px;
+    }
+    .login-info > div {
+        width: 100%;
+        height: 90%;
+        border-radius: 20px;
+        padding: 30px 20px;
+    }
+    #info-img {
+        width: 160px !important;
+    }
+    .login-form-col .container {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+    .login-main {
+        padding: 0;
+        position: relative;
+        min-height: 100vh;
+        background-image:  radial-gradient(circle at center, #eab308, transparent);
+        flex-direction: column;
+        border-radius: 0;
+    }
+    
+    .login-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35vh;
+        z-index: 1;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+    
+    .login-info > div {
+        width: 100%;
+        height: 100%;
+        background: transparent !important;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    #info-img {
+        position: static;
+        transform: none;
+        width: 280px !important;
+        margin-bottom: 0 !important;
+        pointer-events: auto;
+    }
+    
+    #info-title, #info-desc, .indicator {
+        display: none !important;
+    }
+    
+    .login-form-col {
+        position: relative;
+        z-index: 3;
+        background: #ffffff;
+        min-height: 65vh;
+        border-radius: 30px 30px 0 0;
+        margin-top: 35vh;
+        padding: 50px 40px 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-form-col .container {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        max-width: 450px;
+        width: 100%;
+    }
+    
+    .form .title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 35px;
+        font-weight: 700;
+        color: #333;
+    }
+    
+    .input-field {
+        margin-top: 25px;
+    }
+    
+    .input-field input {
+        font-size: 18px;
+        height: 55px;
+        padding: 0 35px;
+    }
+    
+    .form .button input {
+        height: 55px;
+        font-size: 18px;
+    }
+    
+    .checkbox-text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .login-signup {
+        margin-top: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-main {
+        padding: 0;
+        position: relative;
+        min-height: 100vh;
+        background-image:  radial-gradient(circle at center, #eab308, transparent);
+        flex-direction: column;
+        border-radius: 0;
+    }
+    
+    .login-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30vh;
+        z-index: 1;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+    
+    .login-info > div {
+        width: 100%;
+        height: 100%;
+        background: transparent !important;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    #info-img {
+        position: static;
+        transform: none;
+        width: 280px !important;
+        margin-bottom: 0 !important;
+        pointer-events: auto;
+    }
+    
+    #info-title, #info-desc, .indicator {
+        display: none !important;
+    }
+    
+    .login-form-col {
+        position: relative;
+        z-index: 3;
+        background: #ffffff;
+        min-height: 70vh;
+        border-radius: 30px 30px 0 0;
+        margin-top: 30vh;
+        padding: 40px 20px 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-form-col .container {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .container {
+        max-width: 100vw;
+        margin: 0;
+    }
+    
+    .input-field input {
+        font-size: 16px;
+        padding: 0 35px;
+    }
+    
+    .form .title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        color: #333;
+    }
+}
+
+
